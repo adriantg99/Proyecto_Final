@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0B6897A-91A5-4619-A041-2C2AC0F06310}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Winerpest</RootNamespace>
+    <AssemblyName>Winerpest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942" />
+    <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604" />
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d" />
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Catalogo\Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\Catalogo.Designer.cs">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\ConexionCatalogo.cs" />
+    <Compile Include="Cliente\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\EliminarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\EliminarCliente.Designer.cs">
+      <DependentUpon>EliminarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\Opciones clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\Opciones clientes.Designer.cs">
+      <DependentUpon>Opciones clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexiones\Conexion.cs" />
+    <Compile Include="Conexiones\ConexionEliminar.cs" />
+    <Compile Include="Conexiones\ConexionesGps\ConexionesGps.cs" />
+    <Compile Include="Facturas\ConexionFacturas.cs" />
+    <Compile Include="Facturas\Facturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturas\Facturas.Designer.cs">
+      <DependentUpon>Facturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imei\Agregar IMEI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imei\Agregar IMEI.Designer.cs">
+      <DependentUpon>Agregar IMEI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ventas\Ventas.cs" />
+    <Compile Include="Ventas\VentasPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\VentasPrincipal.Designer.cs">
+      <DependentUpon>VentasPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerPetDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WinnerPetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerPetDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WinnerPetDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerPetDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WinnerPetDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerPetDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WinnerPetDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerPetDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WinnerPetDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerPetDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WinnerPetDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerPetDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WinnerPetDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="winnerpetDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>winnerpetDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="winnerpetDataSetCatalogo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>winnerpetDataSetCatalogo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="winnerpetDataSetCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>winnerpetDataSetCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="winnerpetDataSetClienteTAP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>winnerpetDataSetClienteTAP.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Catalogo\Catalogo.resx">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\EliminarCliente.resx">
+      <DependentUpon>EliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\Opciones clientes.resx">
+      <DependentUpon>Opciones clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturas\Facturas.resx">
+      <DependentUpon>Facturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imei\Agregar IMEI.resx">
+      <DependentUpon>Agregar IMEI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ventas\VentasPrincipal.resx">
+      <DependentUpon>VentasPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WinnerPetDataSet.xsc">
+      <DependentUpon>WinnerPetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WinnerPetDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WinnerPetDataSet.xss">
+      <DependentUpon>WinnerPetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet1.xsc">
+      <DependentUpon>WinnerPetDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WinnerPetDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WinnerPetDataSet1.xss">
+      <DependentUpon>WinnerPetDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet2.xsc">
+      <DependentUpon>WinnerPetDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WinnerPetDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WinnerPetDataSet2.xss">
+      <DependentUpon>WinnerPetDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet3.xsc">
+      <DependentUpon>WinnerPetDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WinnerPetDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WinnerPetDataSet3.xss">
+      <DependentUpon>WinnerPetDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet4.xsc">
+      <DependentUpon>WinnerPetDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WinnerPetDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WinnerPetDataSet4.xss">
+      <DependentUpon>WinnerPetDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet5.xsc">
+      <DependentUpon>WinnerPetDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WinnerPetDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WinnerPetDataSet5.xss">
+      <DependentUpon>WinnerPetDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet6.xsc">
+      <DependentUpon>WinnerPetDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="WinnerPetDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WinnerPetDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WinnerPetDataSet6.xss">
+      <DependentUpon>WinnerPetDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="winnerpetDataSet7.xsc">
+      <DependentUpon>winnerpetDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="winnerpetDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>winnerpetDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="winnerpetDataSet7.xss">
+      <DependentUpon>winnerpetDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="winnerpetDataSetCatalogo.xsc">
+      <DependentUpon>winnerpetDataSetCatalogo.xsd</DependentUpon>
+    </None>
+    <None Include="winnerpetDataSetCatalogo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>winnerpetDataSetCatalogo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="winnerpetDataSetCatalogo.xss">
+      <DependentUpon>winnerpetDataSetCatalogo.xsd</DependentUpon>
+    </None>
+    <None Include="winnerpetDataSetCliente.xsc">
+      <DependentUpon>winnerpetDataSetCliente.xsd</DependentUpon>
+    </None>
+    <None Include="winnerpetDataSetCliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>winnerpetDataSetCliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="winnerpetDataSetCliente.xss">
+      <DependentUpon>winnerpetDataSetCliente.xsd</DependentUpon>
+    </None>
+    <None Include="winnerpetDataSetClienteTAP.xsc">
+      <DependentUpon>winnerpetDataSetClienteTAP.xsd</DependentUpon>
+    </None>
+    <None Include="winnerpetDataSetClienteTAP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>winnerpetDataSetClienteTAP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="winnerpetDataSetClienteTAP.xss">
+      <DependentUpon>winnerpetDataSetClienteTAP.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
